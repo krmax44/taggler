@@ -1,5 +1,7 @@
 # Taggler
 
+[![Build Status](https://travis-ci.com/krmax44/taggler.svg?branch=master)](https://travis-ci.com/krmax44/taggler)
+
 Taggler is a CLI to quickly equip your local music files with high quality ID3 tags. It supports multiple data sources and ID3 writers.
 
 ## Installation and Usage
