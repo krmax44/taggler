@@ -1,0 +1,25 @@
+{
+	"name": "taggler-writer-ffmpeg",
+	"version": "0.0.1",
+	"main": "build/FFmpegWriter.js",
+	"types": "build/FFmpegWriter.d.ts",
+	"license": "MIT",
+	"author": "krmax44<hi@krmax44.de>",
+	"repository": {
+		"url": "https://github.com/krmax44/taggler.git",
+		"type": "git",
+		"directory": "packages/taggler-writer-ffmpeg"
+	},
+	"scripts": {
+		"prebuild": "rimraf build",
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json -w"
+	},
+	"dependencies": {
+		"ffmetadata": "^1.5.0",
+		"fs-extra": "^8.1.0"
+	},
+	"peerDependencies": {
+		"taggler": "^0.0.1"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "taggler-scraper-spotify",
+	"version": "0.0.1",
+	"main": "build/SpotifyScraper.js",
+	"types": "build/SpotifyScraper.d.ts",
+	"license": "MIT",
+	"author": "krmax44<hi@krmax44.de>",
+	"repository": {
+		"url": "https://github.com/krmax44/taggler.git",
+		"type": "git",
+		"directory": "packages/taggler-scraper-spotify"
+	},
+	"scripts": {
+		"prebuild": "rimraf build",
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json -w"
+	},
+	"dependencies": {
+		"@types/dotenv": "^6.1.1",
+		"axios": "^0.19.0",
+		"conf": "^5.0.0",
+		"dotenv": "^8.0.0"
+	},
+	"peerDependencies": {
+		"taggler": "^0.0.1"
+	}
+}

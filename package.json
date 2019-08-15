@@ -1,0 +1,66 @@
+{
+	"name": "taggler",
+	"private": true,
+	"version": "0.0.1",
+	"license": "MIT",
+	"author": "krmax44<hi@krmax44.de>",
+	"repository": {
+		"url": "https://github.com/krmax44/taggler.git",
+		"type": "git"
+	},
+	"scripts": {
+		"test": "npm run lint && lerna run test",
+		"lint": "xo",
+		"build": "lerna run --parallel build",
+		"dev": "lerna run --parallel dev",
+		"bootstrap": "lerna bootstrap"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^1.13.0",
+		"@typescript-eslint/parser": "^1.13.0",
+		"eslint-config-prettier": "^6.0.0",
+		"eslint-config-xo-typescript": "^0.15.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"husky": "^3.0.3",
+		"jest": "^24.8.0",
+		"lerna": "^3.16.4",
+		"np": "^5.0.3",
+		"prettier": "^1.18.2",
+		"rimraf": "^2.6.3",
+		"typescript": "^3.5.3",
+		"xo": "^0.24.0"
+	},
+	"xo": {
+		"extends": [
+			"xo-typescript",
+			"plugin:prettier/recommended"
+		],
+		"extensions": [
+			"ts"
+		],
+		"rules": {
+			"unicorn/filename-case": "off",
+			"lines-between-class-members": "off",
+			"no-await-in-loop": "off",
+			"no-warning-comments": "off",
+			"@typescript-eslint/no-var-requires": "off"
+		},
+		"prettier": true,
+		"ignores": [
+			"./tests/**"
+		]
+	},
+	"prettier": {
+		"bracketSpacing": true,
+		"singleQuote": true,
+		"useTabs": true
+	},
+	"husky": {
+		"hooks": {
+			"pre-push": "npm run test"
+		}
+	}
+}

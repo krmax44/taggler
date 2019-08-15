@@ -1,0 +1,31 @@
+{
+	"name": "taggler",
+	"version": "0.0.1",
+	"main": "./build/cli.js",
+	"types": "./build/types/index.d.ts",
+	"bin": "./build/cli.js",
+	"license": "MIT",
+	"author": "krmax44<hi@krmax44.de>",
+	"repository": {
+		"url": "https://github.com/krmax44/taggler.git",
+		"type": "git",
+		"directory": "packages/taggler"
+	},
+	"scripts": {
+		"prebuild": "rimraf build && echo rimrafed",
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json -w"
+	},
+	"dependencies": {
+		"@types/fs-extra": "^8.0.0",
+		"@types/inquirer": "^6.5.0",
+		"@types/node": "^12.7.1",
+		"cac": "^6.5.2",
+		"chalk": "^2.4.2",
+		"fs-extra": "^8.1.0",
+		"inquirer": "^6.5.1",
+		"loading-cli": "^1.0.8",
+		"taggler-scraper-spotify": "^0.0.1",
+		"taggler-writer-ffmpeg": "^0.0.1"
+	}
+}
