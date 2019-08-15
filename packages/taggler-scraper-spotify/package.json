@@ -4,7 +4,8 @@
 	"main": "build/SpotifyScraper.js",
 	"types": "build/SpotifyScraper.d.ts",
 	"files": [
-		"build"
+		"build",
+		".env.local"
 	],
 	"license": "MIT",
 	"author": "krmax44<hi@krmax44.de>",
