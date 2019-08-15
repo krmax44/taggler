@@ -2,7 +2,9 @@ import { resolve } from 'path';
 import dotenv from 'dotenv';
 import Conf from 'conf';
 
-const config = new Conf();
+const config = new Conf({
+	projectName: 'taggler-scraper-spotify'
+});
 
 /*
 	I know you can extract the auth credentials and use for your own purposes.

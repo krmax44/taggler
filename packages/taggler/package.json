@@ -4,6 +4,9 @@
 	"main": "./build/cli.js",
 	"types": "./build/types/index.d.ts",
 	"bin": "./build/cli.js",
+	"files": [
+		"build"
+	],
 	"license": "MIT",
 	"author": "krmax44<hi@krmax44.de>",
 	"repository": {

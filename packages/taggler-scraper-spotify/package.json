@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"main": "build/SpotifyScraper.js",
 	"types": "build/SpotifyScraper.d.ts",
+	"files": [
+		"build"
+	],
 	"license": "MIT",
 	"author": "krmax44<hi@krmax44.de>",
 	"repository": {

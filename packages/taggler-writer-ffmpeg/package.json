@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"main": "build/FFmpegWriter.js",
 	"types": "build/FFmpegWriter.d.ts",
+	"files": [
+		"build"
+	],
 	"license": "MIT",
 	"author": "krmax44<hi@krmax44.de>",
 	"repository": {
