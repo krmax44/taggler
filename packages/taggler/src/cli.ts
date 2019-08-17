@@ -6,8 +6,8 @@ import {
 	Scraper,
 	Writer,
 	TagglerResult,
-	ScraperResult,
-	WriterResult
+	TagglerResults,
+	ScraperResult
 } from './types';
 import { getFiles } from './getFiles';
 
@@ -81,16 +81,18 @@ cli
 				);
 			}
 
-			const written: Array<Promise<WriterResult>> = [];
-			const failedWrites: WriterResult[] = [];
+			const written: Array<Promise<TagglerResult>> = [];
+			const failedWrites: TagglerResults = [];
 
 			for (const { file, name = file, data } of successfulScrapes) {
-				const choices: any = data.map((value: ScraperResult) => ({
-					name: `${value.title} - ${chalk.grey(value.artist)} - ${chalk.grey(
-						value.album
-					)}`,
-					value
-				}));
+				const choices: any = (data as ScraperResult[]).map(
+					(value: ScraperResult) => ({
+						name: `${value.title} - ${chalk.grey(value.artist)} - ${chalk.grey(
+							value.album
+						)}`,
+						value
+					})
+				);
 
 				choices.push({ name: 'None of them match.', value: false });
 
@@ -123,30 +125,28 @@ cli
 
 							Promise.resolve(writer.write(file, selectedData as ScraperResult))
 								.then(result => resolve(result))
-								.catch(error => ({ file, data, error: String(error) }));
+								.catch(error => resolve({ file, data, error: String(error) }));
 						})
 					);
 				}
+			}
 
-				const writingFiles = loading('Writing files...').start();
-				const writerResults = await Promise.all(written);
-				writingFiles.stop();
+			const writingFiles = loading('Writing files...').start();
+			const writerResults = await Promise.all(written);
+			writingFiles.stop();
 
-				failedWrites.push(
-					...writerResults.filter(result => result.error !== false)
+			failedWrites.push(
+				...writerResults.filter(result => result.error !== false)
+			);
+
+			if (failedWrites.length > 0) {
+				console.log(
+					`The following items could not be written successfully:\n${failedWrites
+						.map(({ file, error }) => ` * ${chalk.blue(file)} failed: ${error}`)
+						.join('\n')}`
 				);
-
-				if (failedWrites.length > 0) {
-					console.log(
-						`The following items could not be written successfully:\n${failedWrites
-							.map(
-								({ file, error }) => ` * ${chalk.blue(file)} failed: ${error}`
-							)
-							.join('\n')}`
-					);
-				} else {
-					console.log('All files were successfully written!');
-				}
+			} else {
+				console.log('All files were successfully written!');
 			}
 		} catch (error) {
 			return console.error(error);

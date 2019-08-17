@@ -5,7 +5,7 @@ export interface TagglerResult {
 	file: TagglerFile;
 	name?: string;
 	error: false | string;
-	data?: ScraperResult[]; // Depending on error, it's set or not
+	data?: ScraperResult | ScraperResult[]; // Depending on error, it's set or not
 }
 
 export type TagglerResults = TagglerResult[];
