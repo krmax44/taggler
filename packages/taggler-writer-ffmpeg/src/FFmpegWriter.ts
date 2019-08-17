@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve, parse } from 'path';
 import fs from 'fs-extra';
 import { ScraperResult, WriterResult } from 'taggler';
 
@@ -6,7 +6,8 @@ const ffmetadata: any = require('ffmetadata');
 
 module.exports = class FFmpegWriter {
 	async write(file: string, data: ScraperResult): Promise<WriterResult> {
-		const tmpCover = resolve(file, '..', `.${file}-album-cover.png`);
+		const { name } = parse(file);
+		const tmpCover = resolve(file, '..', `.${name}-album-cover.png`);
 
 		if (data.albumImage) {
 			try {
