@@ -1,6 +1,6 @@
 {
 	"name": "taggler-scraper-spotify",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"main": "build/SpotifyScraper.js",
 	"types": "build/SpotifyScraper.d.ts",
 	"files": [

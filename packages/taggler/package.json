@@ -1,6 +1,6 @@
 {
 	"name": "taggler",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"main": "./build/cli.js",
 	"types": "./build/types/index.d.ts",
 	"bin": "./build/cli.js",
@@ -28,7 +28,7 @@
 		"fs-extra": "^8.1.0",
 		"inquirer": "^6.5.1",
 		"loading-cli": "^1.0.8",
-		"taggler-scraper-spotify": "^0.0.3",
-		"taggler-writer-ffmpeg": "^0.0.3"
+		"taggler-scraper-spotify": "^0.0.4",
+		"taggler-writer-ffmpeg": "^0.0.4"
 	}
 }

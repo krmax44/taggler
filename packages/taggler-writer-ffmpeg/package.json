@@ -1,6 +1,6 @@
 {
 	"name": "taggler-writer-ffmpeg",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"main": "build/FFmpegWriter.js",
 	"types": "build/FFmpegWriter.d.ts",
 	"files": [
