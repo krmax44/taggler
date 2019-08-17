@@ -19,6 +19,14 @@ or run it without installing using `npx`:
 npx taggler "Smash Mouth - All Star.mp3"
 ```
 
+You can also tag multiple files or directories at once:
+
+```bash
+taggler "Cory Wong - The Optimist/" # tag whole directory
+taggler . # tag all files in current directory
+taggler "Smash Mouth - All Star.mp3" "Cory Wong - Light as Anything.mp3" # tag multiple files
+```
+
 ## System
 
 Taggler is divided up into scrapers, writers and the Taggler CLI, that communicates with the former ones. Scrapers (like the Spotify scraper) try to find as much metadata about a file, which is then passed to a writer (like the ffmpeg writer) which actually bakes the data into the previously untagged file. This allows for various data sources and infinite customisability.
