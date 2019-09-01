@@ -26,7 +26,7 @@
 		"cac": "^6.5.2",
 		"chalk": "^2.4.2",
 		"fs-extra": "^8.1.0",
-		"inquirer": "^6.5.1",
+		"inquirer": "^7.0.0",
 		"loading-cli": "^1.0.8",
 		"taggler-scraper-spotify": "^0.0.4",
 		"taggler-writer-ffmpeg": "^0.0.4"
