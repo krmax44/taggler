@@ -3300,9 +3300,9 @@ fb-watchman@^2.0.0:
     bser "^2.0.0"
 
 ffmetadata@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/ffmetadata/-/ffmetadata-1.5.0.tgz#44f2291f6fb51e20625ea5073a4c12184f890772"
-  integrity sha512-besjNc09E0UZ5MXRM1vIn5tX0Jrjt3fGMAHBPV3cjrQ6F7duN1hTJBQ0pXS3/KmpQb9b+wFx1MUK4xzq2knxiw==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/ffmetadata/-/ffmetadata-1.6.0.tgz#d2d773e98d49d91a4b115dc6a37bcf0ecc8b504e"
+  integrity sha512-4JHBtEadWuuQhzPaYYxmt31AkPBIkAxtd3jcR/78JhxQA39MowMEZ3MIgjpBciCCsmMBLHwUp2PlSVc+ztGVUQ==
   dependencies:
     concat-stream "~1.0.0"
     split "~0.2.6"
