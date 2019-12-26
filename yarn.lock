@@ -2116,10 +2116,10 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-colors-cli@^1.0.14:
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/colors-cli/-/colors-cli-1.0.23.tgz#e1addb2faaa945c91ebc55ca92f174b6efb6fa49"
-  integrity sha512-5hcizaqwqMyz9Rjdup8t/On+/24YX8uXbvGvd18wwrUKgF2q/+aHr701Iu0EqROHmDgJhmIC32MACj/5m/l2vQ==
+colors-cli@^1.0.26:
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/colors-cli/-/colors-cli-1.0.26.tgz#5368aec90c80364e6868c57224e74596963ef8ff"
+  integrity sha512-yCz3ZQfOMvPKfa58jpe6PqKhCbr8v8EwLgUnYqcXprmZGruC0Ht2fcvUIFUbkG8sGXFi7uunE493UHXhvOokqQ==
 
 columnify@^1.5.4:
   version "1.5.4"
@@ -5285,11 +5285,11 @@ load-json-file@^5.2.0, load-json-file@^5.3.0:
     type-fest "^0.3.0"
 
 loading-cli@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/loading-cli/-/loading-cli-1.0.8.tgz#5d5b942f0385bcebb1410b5accc58d4d66082c62"
-  integrity sha512-h2PgbEPRQzDj9Ox8voggvXfRkxIQGMGRPwCAGPijRjXB0UyiIBAdYjoJG0on/uCl0gYLeJJQ9bgOiKO1v+++vA==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/loading-cli/-/loading-cli-1.1.0.tgz#3457edaa3290439ad0061755174363a8091d56bc"
+  integrity sha512-r6Kj0Y3d3isT4vvJ0tFlND1CcLkpatWmlgQs/PEfnSofJSHZwAbsqexnpQEDj4nlxSXEqFWh/Wu2iQXAAZRPNQ==
   dependencies:
-    colors-cli "^1.0.14"
+    colors-cli "^1.0.26"
 
 locate-path@^2.0.0:
   version "2.0.0"
